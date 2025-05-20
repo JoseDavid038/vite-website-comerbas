@@ -1,0 +1,20 @@
+.hero.ips{
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+
+.tab__nav-list li{
+  text-align: initial;
+  line-height: var(--spacing-medium);
+  color: var(--text-ligh-blue);
+  align-items: center;
+}
+
+.js-section-paragraph, .js-section-paragraph2{
+  line-height: 1.5rem;
+  color: var(--text-ligh-blue);
+}
+
+.section__title.js-title-form{
+  letter-spacing: -1px;
+}

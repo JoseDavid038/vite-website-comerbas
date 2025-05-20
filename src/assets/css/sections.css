@@ -1,0 +1,234 @@
+
+.main{
+  overflow: hidden;
+}
+
+
+.whatsapp{
+  position: fixed;
+  right: 1rem;
+  bottom: 4rem;
+  display: inline-flex;
+  padding: 6px;
+  z-index: var(--z-tooltip);
+  width: 50px;
+}
+
+.whatsapp-text{
+  display: none;
+}
+
+/* services */
+
+.menu-tab{
+  background: var(--white-color);
+  border-radius: 2rem;
+  padding: 0.2rem 0.5rem;
+  align-items: center;
+  display: flex;
+  overflow-x: auto;  /* Enable horizontal scroll */
+  white-space: nowrap;  /* Prevent line breaks */
+  scroll-behavior: smooth; /* Smooth scroll effect */
+  border-style: solid;
+  border-color: lightgray;
+  border-width: 1px;
+}
+
+.tab-buttons{
+  width: 11rem;
+  font-size: var(--font-small);
+  text-align: center;
+  border-radius: 2rem;
+  padding: 0.9rem 0.7rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  /*flex-shrink: 0; Prevent shrinking when scrolling */
+}
+
+.menu-tab::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome & Safari */
+}
+
+.tab-buttons.active {
+  background: var(--button-bg2);
+  color: var(--white-color);
+  font-weight: 100;
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+}
+  
+
+.section__content-services{
+  text-align: center;
+  margin-inline: 0.9rem;
+}
+
+.section__content-tabs{
+  text-align: initial;
+  margin-block: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.section__content-tabs > p,ul{
+  color: var(--text-light-gray); 
+  font-size: var(--font-normal);
+}
+
+.section__content-tabs > ul{
+  row-gap: 1rem;
+}
+
+.tab__nav-list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.tab__nav-list > li{
+  display: flex;
+  column-gap: 10px;
+}
+
+.ri-checkbox-circle-line {
+  color:var(--button-bg2);
+  font-size: var(--font-title);
+}
+
+.section__subtitle-tabs {
+  font-size: var(--font-heading);
+  font-weight: var(--font-extrabold);
+  color: var(--text-dark-blue);
+}
+
+.section__content-tabs.swiper-slide{
+  padding-block: .2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.tab-info-container{
+  padding-block: .2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.grid-tabs{
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.swiper2{
+  width: 100%;
+  height: auto;
+}
+
+
+.appliances, .services{
+  background: var(--background-section);
+}
+
+.button--section{
+  background: var(--button-bg2);
+  column-gap: 20px;
+}
+
+.button--services{
+  background: var(--white-color);
+  column-gap: 20px;
+  color: var(--button-bg2);
+  font-weight: var(--font-bold);
+  border-style: solid;
+  border-color: var(--button-bg2);
+  border-width: 1px;
+}
+
+.section__content > img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.section__subtitle {
+  font-size: var(--font-normal);
+  font-weight: var(--font-semibold);
+  color: var(--text-light-gray);
+  margin-bottom: .5rem;
+  line-height: var(--spacing-medium);
+}
+
+
+.medical__tests-title{
+  font-size: 1.8rem;
+}
+
+.reviews{
+  background: var(--background-section-second);
+}
+
+.quotes{
+  text-align: initial;
+}
+
+.ri-double-quotes-l{
+  font-size: 4rem;
+  color: 	hsl(230, 61%, 22%, 0.5);
+  
+}
+
+.review__text{
+  text-align: initial;
+  font-size: 1.8rem;
+  font-weight: var(--font-extrabold);
+  color: var(--text-dark-blue);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.review__text-name{
+  color: var(--text-dark-blue);
+  font-weight: var(--font-bold);
+  text-align: initial;
+  margin-bottom: 20px;
+}
+
+.contact{
+  background: var(--background-section);
+}
+
+.contact__content > h2,p,form,button{
+  text-align: initial;
+}
+
+.contact__content > p {
+  font-size: 1rem;
+  color: var(--text-light-gray); 
+  margin-bottom: 1.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.contact-form > input,textarea{
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 20px;
+  font-size: var(--font-base);
+  font-weight: var(--font-bold);
+}
+
+::placeholder {
+  color: var(--text-light-gray); 
+  font-weight: var(--font-bold);
+  font-family: var(--font-primary);
+}
+
+
+

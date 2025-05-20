@@ -1,0 +1,107 @@
+/* reset - base*/
+
+/* ========== Reset & Base Styles ========== */
+
+/* Box model reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body styles */
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-base);
+  background-color: var(--background-light);
+  color: var(--text-dark);
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  color: var(--text-dark);
+  font-weight: var(--font-semibold);
+}
+
+/* Lists */
+ul {
+  list-style: none;
+}
+
+/* Images */
+img {
+  
+  max-width: 100%;
+  height: auto;
+}
+
+.main {
+  overflow: hidden;
+  padding-block: 4rem .2rem;
+}
+
+
+/* reusable css classes */
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section{
+  margin-block: 2rem 2rem;
+  padding-block: 3rem;
+  border-radius: 30px;
+}
+
+.section__content{
+  text-align: center;
+  margin-inline: 1.5rem;
+}
+ 
+
+.section__title, 
+.section__subtitle {
+  text-align: center;
+}
+
+
+.section__title {
+  font-size: var(--font-heading);
+  font-weight: var(--font-extrabold);
+  margin-bottom: 1.5rem;
+  color: var(--text-dark-blue);
+}
+
+
+.button{
+  display: inline-flex;
+  color: var(--white-color);
+  font-weight: var(--font-semibold);
+  padding: 0.8rem 1rem;
+  font-size: 0.8rem;
+  transition: box-shadow .4s;
+  border-radius: var(--border-radius-buttons);
+  column-gap: 8px;
+  align-items: center;
+  margin-top: .8rem;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+/* .button:hover{
+  box-shadow: 0 8px 32px hsla(152, 94%, 30%);
+  color: var(--white-color);
+} */

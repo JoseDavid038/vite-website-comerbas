@@ -1,0 +1,66 @@
+:root {
+
+  --header-height: 4rem;
+
+  /* Colors */
+
+  --black-color: black;
+  --white-color: white;
+  
+  --primary-color: #05944D; /* Main Green */
+  --secondary-color:  #004AAD; /* blue */
+  --terciary-color: #95B4D5;
+  --background-light: white;
+  --background-slide-main: #C9EDDB;
+  --background-slide-second: #DBECFF;
+  --background-section: #F2F5F9;
+  --background-section-second: #DBECFF;
+  --background-dark-blue: #16215B;
+  --text-dark: #1A1A1A;
+  --text-light: #FFFFFF;
+  --text-dark-blue: #16215B;
+  --text-ligh-blue: #5D6A85;
+  --text-light-gray: #5a657a;
+  --text-inputs: #66738C;
+  --button-bg: #16215B;
+  --button-hover: #003B8A;
+  --button-bg2: #0070FA;
+  
+
+  --black-border: hsl(255, 10%, 20%);
+  
+  /* Typography */
+  /* Font Family */
+  --font-primary: 'Plus Jakarta Sans', sans-serif;
+
+  /* Font Weights */
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  /* Font Sizes */
+  /*.5rem = 8px | 1rem = 16px ...*/
+
+  --font-small: 0.875rem;  /* 14px */
+  --font-normal: .938rem;
+  --font-base: 1rem;       /* 16px */
+  --font-large: 1.125rem;  /* 18px */
+  --font-title: 1.5rem;    /* 24px */
+  --font-heading: 2rem;    /* 32px */
+  
+  /* Spacing (converted to rem) */
+  --spacing-small: 0.5rem;  /* 8px */
+  --spacing-medium: 1.3rem;   /* 16px */
+  --spacing-large: 2rem;    /* 32px */
+  
+  /* Borders (converted to rem) */
+  --border-radius: 0.5rem;  /* 8px */
+  --border-radius-buttons : 1.5rem; /*25px*/
+
+  /* z - index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}

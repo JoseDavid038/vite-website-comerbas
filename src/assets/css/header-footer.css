@@ -1,0 +1,180 @@
+
+.logo{
+  width: 120px;
+}
+
+
+.active-link{
+  color: var(--primary-color);
+}
+
+.header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--white-color);
+}
+
+.nav{
+  position: relative;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0.1rem;
+}
+
+.nav__container {
+  max-width: 100%;
+  margin-inline: 1rem;
+}
+
+.nav__logo{
+  display: flex;
+  align-items: center;
+}
+
+
+
+.nav__toggle,
+.nav__close{
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color .4s;
+  font-weight: var(--font-bold);
+  display: inline-flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+
+.nav__list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin-top: -32px;
+}
+
+.nav__link{
+  color: var(--black-color);
+  font-weight: var(--font-semibold);
+  transition: color .4s;
+  cursor: pointer;
+}
+
+
+.js-nav__link:hover{
+  color: var(--primary-color);
+}
+
+.nav__close{
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+
+/* button */
+.button--menu{
+  display: inline-flex;
+  background: var(--primary-color);
+  padding: 1rem 1.5rem;
+}
+
+
+.button--menu-tramites:hover{
+  background: #036132;
+  color: var(--white-color);
+}
+
+.nav__menu-button{
+  margin-top: 15px;
+}
+
+
+
+
+/* footer */
+
+.footer{
+  background: var(--background-dark-blue);
+  /* margin-block: .01rem ; */
+}
+
+.footer__section{
+  margin-block: .2rem ;
+  padding-block: 3rem;
+  border-radius: 30px;
+}
+
+.footer__grid {
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.footer__content{
+  row-gap: 3rem;
+}
+
+.footer__slogan{
+  color: var(--white-color);
+  font-weight: 100;
+  margin-bottom: 3rem;
+}
+
+.footer-nav-link{
+  color: var(--white-color);
+  text-align: initial;
+}
+
+.footer__info-contact{
+  display: flex;
+  flex-direction: column;
+  row-gap:30px;
+}
+
+.info__contact > i {
+  color: #18E4A1;
+  font-size: var(--font-title);
+}
+
+.info__contact{
+  display: flex;
+  column-gap: 8px;
+}
+
+.footer__icons{
+  display: flex;
+  column-gap: 30px;
+}
+
+.footer__nav__list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.footer__nav__list > li{
+  color: var(--white-color);
+  font-weight: 100;
+  text-align: initial;
+}
+
+.footer__rights{
+  font-size: 0.7rem;
+  color: var(--white-color);
+  font-weight: 100;
+  text-align: center;
+  margin-top: 3.125rem;
+}
+
+
+
+
+
+
+
+
+
