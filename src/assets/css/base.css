@@ -65,6 +65,11 @@ img {
   border-radius: 30px;
 }
 
+.section2{
+  margin-block: 2rem 2rem;
+  padding-block: 3rem;
+}
+
 .section__content{
   text-align: center;
   margin-inline: 1.5rem;
