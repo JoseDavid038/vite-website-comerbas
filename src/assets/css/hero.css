@@ -52,8 +52,21 @@
   width: 390px;
   max-width: 400px;
   height: 300px;
-  object-fit: contain;
 }
+
+.swiper__img.index{
+  object-fit: cover;
+  object-position: -30px -5px;
+}
+
+.swiper__img.index.slide2{
+  width: 370px;
+  max-width: 400px;
+  height: 250px;
+  object-fit: contain;
+   object-position: -29px 20px;
+}
+
 
 
 /* empresas */

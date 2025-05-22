@@ -87,6 +87,22 @@ loadComponent("#section-6", "/components/section5.html", {
   buttonLink: "/index.html"
 });
 
+loadComponent("#section-7", "/components/section6.html", {
+  image: "../assets/images/services/service-exequial.png",
+  title: "Acompañamos a tu equipo en los momentos dificiles con planes exequiales",
+  paragraph: "Brinda tranquilidad total a tu familia en los momentos más difíciles. Te acompañamos en los momentos más dificiles.",
+  buttonText: "Contáctanos para saber más",
+  buttonLink: "/index.html"
+});
+
+loadComponent("#section-8", "/components/section6.html", {
+  image: "../assets/images/services/service-dreams.png",
+  title: "Ayuda a tu equipo a cumplir sus sueños con nosotros",
+  paragraph: "Ofrecemos un gran portafolio de créditos que tus empleados pueden cumplir sus poryectos. Nosotros nos encargamos de todo.",
+  buttonText: "Contáctanos para saber más",
+  buttonLink: "/index.html"
+});
+
 
 
 

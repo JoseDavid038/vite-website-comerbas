@@ -3,6 +3,31 @@
   object-position: -70px -15px;
 }
 
+.swiper2.empresas{
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+}
+
+.swiper__img.empresas.slide2{
+    width: 600px;
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    top: -10px;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .swiper__img.empresas.slide3{
+    width: 600px;
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    top: 10px;
+    object-fit: contain;
+    object-position: center;
+  }
+
 .selection__process-info{
   display: flex;
   flex-direction: column;
