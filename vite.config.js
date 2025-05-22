@@ -6,7 +6,7 @@ export default defineConfig({
     port: 5173, // You can change this to any port you like
     host: true, // important to allow external access
     allowedHosts: [
-      '0e35-186-30-185-87.ngrok-free.app' // <- your ngrok domain
+      'ff35-190-26-144-252.ngrok-free.app' // <- your ngrok domain
     ]
   }
 });

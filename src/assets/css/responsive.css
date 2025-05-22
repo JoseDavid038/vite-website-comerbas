@@ -374,7 +374,6 @@
   .swiper-pagination .swiper-pagination-bullet-active {
     background: var(--background-dark-blue);
   }
-
   
   .whatsapp{
     background: #2DA41D;
@@ -668,6 +667,11 @@
     width: 300px;
   }
 
+  .review__content.empresas{
+    display: flex;
+    flex-direction: column;
+  }
+
   .review__text.empresas{
     width: 1100px;
   }
@@ -815,15 +819,30 @@
 
   .title__slider.title__slider-e {
     margin-bottom: 20px;
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: var(--font-semibold);
-    letter-spacing: -4px;
+    letter-spacing: -2px;
+    width: 630px;
   }
 
-  .hero.ips{
-    margin-bottom: 0rem;
-    padding-bottom: 0rem;
+  /* ips */
+
+  .title__slider.title__slider-i{
+    margin-bottom: 20px;
+    font-size: 4.2rem;
+    font-weight: var(--font-semibold);
+    letter-spacing: -5px;
   }
+
+  /* .swiper__img.empresas{
+    width: 600px;
+    height: auto;
+    position: relative;
+    object-fit: contain;
+    object-position: center;
+    top: -50px;
+    left: 130px;
+  } */
 
 }
 

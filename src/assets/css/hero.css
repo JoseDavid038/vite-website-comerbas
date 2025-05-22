@@ -119,3 +119,19 @@
   padding-top: 4rem;
   padding-bottom: .001rem;
 }
+
+.swiper-slide-ips{
+  background-color: var(--background-section-third);
+}
+
+.title__slider.title__slider-i {
+  color: var(--background-dark-blue);
+  font-size: 1.9rem;
+  letter-spacing: -2px;
+
+}
+
+.text__slider.text__slider-i{
+  color: var(--background-dark-blue);
+  
+}

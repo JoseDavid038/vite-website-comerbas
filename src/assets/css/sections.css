@@ -218,6 +218,11 @@
   background: var(--background-section-second);
 }
 
+.reviews.ips{
+  background: var(--background-section-third);
+}
+
+
 .quotes{
   text-align: initial;
 }
