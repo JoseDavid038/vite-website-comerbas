@@ -168,7 +168,7 @@
 
 .service-box{
   background: #F0DA6A;
-  border-radius: 30px;
+  border-radius: 48px;
   padding-block: 3rem;
   padding-inline: 2.5rem;
   display: flex;
@@ -286,6 +286,5 @@
   font-weight: var(--font-bold);
   font-family: var(--font-primary);
 }
-
 
 

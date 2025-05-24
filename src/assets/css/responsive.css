@@ -338,6 +338,8 @@
     left: 60px;
   }
 
+   
+
   .swiper-slide-hero{
     display: grid;
     grid-template-columns: 40rem 500px;
@@ -449,17 +451,30 @@
     margin-inline: auto;
   }
 
-  .swiper2.empresas{
-    padding-top: 4rem;
-    padding-bottom: 8rem;
+  .swiper2, .swiper2.empresas{
+    padding-top: 2.5rem;
+    padding-bottom: 6.5rem;
   }
 
   .section__subtitle-tabs{
     font-size: 1.8rem;
   }
 
+  .tab-empresas > h2,
+  .tab-empresas > p,
+  .tab-empresas > ul {
+  width: 600px;
+  }
 
-  .tab-info-container > p,ul{
+  .tab-personas > h2,
+  .tab-personas > p,
+  .tab-personas > ul {
+  width: 700px;
+  }
+
+
+  .tab-info-container > p,
+  .tab-info-container > ul{
     color: var(--text-light-gray); 
     font-size: 1rem;
   }
@@ -484,6 +499,10 @@
 
   .section__content > .section__title, .section__subtitle{
     width: 50%;
+  }
+
+  .appliances.section.selection__process{
+    padding-top: 1.5rem;
   }
 
   .section__content > img{
@@ -519,20 +538,20 @@
   }
 
   .selection__process-info{
-    padding-block: 1.5rem;
+    padding-block: 1.3rem;
     padding-inline: 1.5rem;
-    row-gap: 20px;
+    row-gap: 15px;
   }
 
   .selection__process-item > span{
-    font-size: var(--font-title);
+    font-size: 1.3rem;
   }
 
   .image__container {
     width: 100%;
     height: 80%;
     position: relative;
-    top: 180px;
+    top: 140px;
     left: -100px;
   }
 
@@ -586,6 +605,7 @@
   .medical__tests-image {
     grid-area: image;
     width: 100%;
+    text-align: end;
   }
   
   
@@ -597,9 +617,7 @@
     object-fit: cover;
   }
 
-  .medical__tests-image{
-    text-align: end;
-  }
+  
 
   .section__content-tests{
     text-align: left;
@@ -634,6 +652,7 @@
 
   .section__title.empresas.allied{
     width: 700px;
+    font-size: 2.25rem;
   }
 
   .section__subtitle.empresas.allied{
@@ -674,6 +693,7 @@
 
   .review__text.empresas{
     width: 1100px;
+    font-size: 3rem;
   }
 
   .reviews{
@@ -682,7 +702,7 @@
   }
 
   .reviews.section2{
-    padding-block: 4rem 3rem;
+    padding-block: 2.5rem 3rem;
   }
 
   .service-box{
@@ -692,7 +712,7 @@
   .telemedicina-info-box{
     display: flex;
     column-gap: 3rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   .telemedicina-section-image{
@@ -724,7 +744,7 @@
   .appliaces-container.section__content.grid.telemedicina{
     display: flex;
     flex-direction: column;
-    row-gap: .5rem;
+    row-gap: .1rem;
   }
   
 
@@ -737,7 +757,8 @@
   .section__title.empresas.faq{
     width: 600px;
     margin-bottom: 80px;
-    font-size: 48px;
+    font-size: 2.5rem;
+    text-align: center;
 
   }
 
@@ -785,6 +806,13 @@
     column-gap: 0.625rem;
   }
 
+  .button--section.tele{
+    padding: .8rem 1rem;
+    font-size: 0.7rem;
+    display: flex;
+    column-gap: 0.625rem;
+  }
+
 
 
   .footer__grid {
@@ -807,6 +835,7 @@
     margin-top: 1rem;
   }
 
+
   .footer__nav__list > .nav__link{
     font-size: var(--normal-font-size);
   }
@@ -816,25 +845,33 @@
     padding-bottom: 1.5rem;
   }
 
+  .footer__slogan{
+    width: 370px;
+  }
+
+  .footer-nav-link{
+    width: 350px;
+  }
+
+  .footer__grid{
+    display: grid;
+    grid-template-columns: 400px 500px 400px;
+  }
+
 
   .title__slider.title__slider-e {
     margin-bottom: 20px;
     font-size: 4rem;
     font-weight: var(--font-semibold);
     letter-spacing: -2px;
-    width: 630px;
+    width: 730px;
   }
 
-  /* ips */
-
-  .title__slider.title__slider-i{
-    margin-bottom: 20px;
-    font-size: 4.2rem;
-    font-weight: var(--font-semibold);
-    letter-spacing: -5px;
+  .text__slider-e{
+    width: 510px;
   }
 
-  /* .swiper__img.empresas{
+  .swiper__img.empresas{
     width: 600px;
     height: auto;
     position: relative;
@@ -842,7 +879,114 @@
     object-position: center;
     top: -50px;
     left: 130px;
-  } */
+  }
+
+  /* ips */
+
+  .title__slider.title__slider-i{
+    font-size: 4.2rem;
+    font-weight: var(--font-semibold);
+    letter-spacing: -5px;
+  }
+
+  .swiper-slide.ips{
+    padding-top: 2rem;
+  }
+
+  .service-container{
+    display: grid;
+    grid-template-columns: 600px 700px;
+    column-gap: 60px;
+  }
+
+  .section__subtitle-tabs.ips{
+    font-size: 2.2rem;
+    text-align: initial;
+  }
+
+  .js-section-paragraph.ips,
+  .js-section-paragraph2.ips{
+    width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+  }
+
+  .tab__nav-list.ips{
+    font-size: 1.1rem;
+  }
+
+  .tab__nav-list.ips > li{
+    line-height: 1.8rem;
+  }
+
+  .container-button-ips{
+    text-align: initial;
+  }
+
+  .button--services.ips{
+    font-weight: var(--font-extrabold);
+    font-size: var(--font-normal);
+  }
+
+  .test-auditivo-ips{
+    display: grid;
+    grid-template-columns: 1fr 530px;
+    grid-template-areas: "text image";
+    align-items: center;
+    column-gap: 10px;
+    padding-block: 20px;
+  }
+
+  .tab-info-container.ips{
+    padding-left: 5rem;
+  }
+
+  .certified-ips{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  .tab-image-container.certified{
+    order: 1;
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    object-position: right;
+  }
+
+  .tab-info-container.certified{
+    order: 2;
+
+  }
+
+
+  .psicologia-ips{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  .tab-image-container.psicologia{
+    order: 2;
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    object-position: right;
+  }
+
+  .tab-info-container.psicologia{
+    order: 1;
+    padding-left: 5rem;
+  }
+
+ 
+
+  
+
+  
 
 }
 

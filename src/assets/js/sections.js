@@ -45,7 +45,7 @@ loadComponent("#section-1", "/components/sections.html", {
 });
 
 
-loadComponent("#section-2", "/components/sections.html", {
+loadComponent("#section-2", "/components/section2.html", {
   image: "../assets/images/services/service-psicology.png",
   title: "Psicología Laboral",
   paragraph: "Evaluamos los factores psicosociales que impactan en el desempeño y bienestar de sus colaboradores, identificando fortalezas y áreas de mejora para optimizar el ambiente laboral.",

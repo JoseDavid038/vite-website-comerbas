@@ -12,6 +12,8 @@
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Body styles */
@@ -20,6 +22,8 @@ body {
   font-size: var(--font-base);
   background-color: var(--background-light);
   color: var(--text-dark);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Links */
@@ -109,4 +113,9 @@ img {
 /* .button:hover{
   box-shadow: 0 8px 32px hsla(152, 94%, 30%);
   color: var(--white-color);
+} */
+
+/* html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 } */
