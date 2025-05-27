@@ -514,6 +514,7 @@
 
   .section__subtitle{
     font-size: var(--normal-font-size);
+    margin-block: 1rem;
   }
 
   .selection__process-grid{
@@ -628,7 +629,7 @@
 
   .grid-allied{
     grid-template-columns: 750px 1fr;
-    grid-template-rows: 490px;
+    grid-template-rows: 530px;
     text-align: left;
     padding-block: 10px;
     padding-inline: 50px;
@@ -797,6 +798,11 @@
 
   .contact-form{
     width: 800px;
+  }
+
+  .contact__content > p{
+    width: 600px;
+    line-height: 1.5rem;
   }
 
   .button--section{
@@ -983,10 +989,89 @@
   }
 
  
+/* nosotros */
 
-  
 
+.nosotros-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 55%;
+}
+
+.button--section {
+  display: inline-block;
+  width: fit-content;
+}
+
+.section__subtitle-us{
+  text-align: center;
+}
+
+.container--button--section{
+  display: flex;
+  justify-content: center;
+}
+
+.nosotros-info > h2{
+  font-size: 2.25rem;
+}
+
+.nosotros-info > p{
+  font-size: 1.125rem;
+  line-height: 1.7rem;
+}
+
+video{
+  border-radius: 16px; 
+  width: 100%;
+  max-width: 1300px;
+  height: auto;
+}
+
+.medical__tests-title{
+  font-size: 2.25rem;
+}
+
+
+.medical__tests-container.nosotros{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "image text";
+    align-items: center;
+    column-gap: 90px;
+    padding-block: 20px;
+  }
+
+  .medical__tests-info.nosotros {
+    grid-area: text;
+    display: grid;
+    row-gap: 10px;
+  }
+
+  .medical__tests-image {
+    grid-area: image;
+    width: 100%;
+    text-align: end;
+  }
   
+  
+  .medical__tests-image > img{
+    border-radius: 20px;
+    width: 500px;
+    height: 520px;
+    max-width: 100%;
+    object-fit: cover;
+  }
+  
+  .tab__nav-list.nosotros{
+    margin-block: 25px;
+  }
+
+  .section__subtitle-tabs.nosotros{
+    font-size: 2.25rem;
+    margin-bottom: .5rem;
+  }
 
 }
 

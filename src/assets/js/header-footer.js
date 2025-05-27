@@ -9,8 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   });
 
-  loadComponent("footer", "/components/footer.html");
-  
+  loadComponent("footer", "/components/footer.html", () => {
+     setNavLinks2();
+  });
+    
 });
 
 // Function to fetch and load components
@@ -119,6 +121,37 @@ function setNavLinks(){
   });
 
 };
+
+
+
+function setNavLinks2(){
+
+  const navLinks = document.querySelectorAll('.js-nav__link');
+
+  navLinks.forEach(link => {
+
+    // handle navigation links
+
+      const pageMap = {
+        "Para Empresas": "/src/pages/empresas.html",
+        "Para Personas": "/src/pages/index.html",
+        "IPS": "/src/pages/ips.html",
+        "Sobre nosotros": "/src/pages/nosotros.html"
+      };
+
+    // Add event listener for clicks
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      const page = link.textContent.trim();
+
+      if (pageMap[page]) {
+        window.location.href = pageMap[page];
+      };
+    });
+  });
+
+};
+
 
 
 

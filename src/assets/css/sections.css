@@ -90,6 +90,7 @@
   column-gap: 10px;
 }
 
+
 .ri-checkbox-circle-line {
   color:var(--button-bg2);
   font-size: var(--font-title);
@@ -287,4 +288,25 @@
   font-family: var(--font-primary);
 }
 
+.section__subtitle-us{
+  text-align: center;
+  font-size: var(--font-normal);
+  font-weight: var(--font-semibold);
+  color: var(--text-light-gray);
+  margin-bottom: .5rem;
+  line-height: var(--spacing-medium);
+}
+
+video{
+  border-radius: 16px; 
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+
+.sectionUs{
+  margin-block: .5rem 2rem;
+  padding-block: 3rem;
+  border-radius: 30px;
+}
 

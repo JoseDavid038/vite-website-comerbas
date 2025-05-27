@@ -69,6 +69,10 @@
   color: var(--primary-color);
 }
 
+.nav__link.lf:hover{
+  color: #18E4A1;
+}
+
 .nav__close{
   position: absolute;
   top: 1rem;
@@ -156,7 +160,7 @@
   row-gap: 1.5rem;
 }
 
-.footer__nav__list > li{
+.nav__link.lf{
   color: var(--white-color);
   font-weight: 100;
   text-align: initial;
