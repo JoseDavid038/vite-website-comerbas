@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  loadComponent2("section-why", "/components/section-fixed.html");
+  // loadComponent2("section-why", "/components/section-fixed.html");
 
   
 });

@@ -1024,9 +1024,9 @@
 
 video{
   border-radius: 16px; 
-  width: 100%;
+  width: 75rem;   /*100%*/
   max-width: 1300px;
-  height: auto;
+  height: 26.875rem;  /*auto*/
 }
 
 .medical__tests-title{

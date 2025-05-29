@@ -1,8 +1,31 @@
+import emailjs from '@emailjs/browser';
+
 document.addEventListener('DOMContentLoaded', function() {
   loadComponent("contact-form", "/components/contact-form.html" , () => {
     changeTitle();
 
+
+    
+  const form = document.getElementById('contact__form');
+  
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm('service_m1pa9ia', 'template_zdq9of5', this, 'K0jm7Mkr3VCbKfM0l')
+        .then(() => {
+          alert('Mensaje enviado con éxito.');
+          form.reset();
+        }, (error) => {
+          console.error('Error al enviar el mensaje:', error);
+          alert('Ocurrió un error. Inténtalo de nuevo.');
+        });
+    });
+  }
+
   });
+
+
   
 });
 
@@ -31,3 +54,6 @@ function changeTitle(){
     paragraphForm.textContent = "Estamos felices en brindarte ayuda en lo que necesites.";
    }
 }
+
+
+
