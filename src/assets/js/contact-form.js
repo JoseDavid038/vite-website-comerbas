@@ -3,30 +3,10 @@ import emailjs from '@emailjs/browser';
 document.addEventListener('DOMContentLoaded', function() {
   loadComponent("contact-form", "/components/contact-form.html" , () => {
     changeTitle();
-
-
-    
-  const form = document.getElementById('contact__form');
-  
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      emailjs.sendForm('service_m1pa9ia', 'template_zdq9of5', this, 'K0jm7Mkr3VCbKfM0l')
-        .then(() => {
-          alert('Mensaje enviado con éxito.');
-          form.reset();
-        }, (error) => {
-          console.error('Error al enviar el mensaje:', error);
-          alert('Ocurrió un error. Inténtalo de nuevo.');
-        });
-    });
-  }
-
+    setupForm();
+      
   });
 
-
-  
 });
 
 // Function to fetch and load components
@@ -53,6 +33,56 @@ function changeTitle(){
     titleForm.textContent = "Contáctanos";
     paragraphForm.textContent = "Estamos felices en brindarte ayuda en lo que necesites.";
    }
+}
+
+function setupForm() {
+
+  const form = document.getElementById('contact__form');
+  const recaptchaContainer = document.getElementById("recaptcha-container");
+
+  if (!form || !recaptchaContainer) return;
+
+  // Render the reCAPTCHA
+  if (typeof grecaptcha !== "undefined") {
+    grecaptcha.ready(() => {
+      grecaptcha.render(recaptchaContainer, {
+        sitekey: "6LeAGk8rAAAAAG77eJw_s7eid0UjdVftn2tyAPp2" 
+      });
+    });
+  } else {
+    console.error("grecaptcha not loaded");
+  }
+
+
+  // Handle form submission
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const consentCheckbox = document.getElementById("data-consent");
+    const recaptchaResponse = grecaptcha.getResponse();
+
+    if (!consentCheckbox.checked) {
+      alert("You must agree to the data policy.");
+      return;
+    }
+
+    if (!recaptchaResponse) {
+      alert("Please verify that you are not a robot.");
+      return;
+    };
+
+
+  emailjs.sendForm('service_m1pa9ia', 'template_zdq9of5', this, 'K0jm7Mkr3VCbKfM0l')
+        .then(() => {
+          alert('Mensaje enviado con éxito.');
+          form.reset();
+          grecaptcha.reset();
+        }, (error) => {
+          console.error('Error al enviar el mensaje:', error);
+          alert('Ocurrió un error. Inténtalo de nuevo.');
+        });
+      });
+
 }
 
 

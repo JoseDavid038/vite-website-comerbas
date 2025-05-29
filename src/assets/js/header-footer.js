@@ -100,7 +100,7 @@ function setNavLinks(){
         "Para Empresas": "/src/pages/empresas.html",
         "Para Personas": "/src/pages/index.html",
         "IPS": "/src/pages/ips.html",
-        "Sobre nosotros": "/src/pages/nosotros.html"
+        "Sobre nosotros": "/src/pages/nosotros.html",
       };
 
        // Add active class based on the current page
@@ -136,7 +136,8 @@ function setNavLinks2(){
         "Para Empresas": "/src/pages/empresas.html",
         "Para Personas": "/src/pages/index.html",
         "IPS": "/src/pages/ips.html",
-        "Sobre nosotros": "/src/pages/nosotros.html"
+        "Sobre nosotros": "/src/pages/nosotros.html",
+        "Protección de Datos": "/public/docs/Politica_tratamiento_datos.pdf"
       };
 
     // Add event listener for clicks
