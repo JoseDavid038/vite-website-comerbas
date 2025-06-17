@@ -32,6 +32,10 @@
     transition: right .4s;
   }
 
+  .dropdown__container2{
+    top: 290px;
+  }
+
   .nav__logo{
     z-index: 1;
   }

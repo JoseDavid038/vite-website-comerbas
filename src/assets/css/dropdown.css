@@ -53,3 +53,17 @@
   padding-block: 8px;
   align-self: center;
 }
+
+.dropdown__button2{
+  column-gap: 2.7px;
+  font-size: 10px;
+  background: var(--white-color);
+  color: var(--button-bg2);
+  font-weight: var(--font-bold);
+  border-style: solid;
+  border-color: var(--button-bg2);
+  border-width: 1px;
+
+  padding-block: 8px;
+  align-self: center;
+}
