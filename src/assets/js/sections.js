@@ -20,8 +20,11 @@ async function loadComponent (selector, componentPath, data = {}) {
     container.querySelector(".js-section-itemList").textContent = data.itemList || "Comerbas";
   }
   container.querySelector(".js-section-button").textContent = data.buttonText || "Comerbas";
-  container.querySelector(".button--services").href = data.buttonLink || "#";
-
+  // container.querySelector(".button--services").href = data.buttonLink || "#";
+  const button = container.querySelector(".button--services");
+  if (button) {
+    button.href = data.buttonLink || "#";
+  }
 
  // Populate the list items
  const listItems = container.querySelectorAll(".js-section-itemList");

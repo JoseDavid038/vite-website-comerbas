@@ -35,6 +35,8 @@ function changeTitle(){
    }
 }
 
+let recaptchaWidgetId = null;
+
 function setupForm() {
 
   const form = document.getElementById('contact__form');
@@ -45,16 +47,22 @@ function setupForm() {
   // Render the reCAPTCHA
   if (typeof grecaptcha !== "undefined") {
     grecaptcha.ready(() => {
-      grecaptcha.render(recaptchaContainer, {
-        sitekey: "6LeAGk8rAAAAAG77eJw_s7eid0UjdVftn2tyAPp2" 
-      });
+      if (recaptchaWidgetId === null) {
+        recaptchaWidgetId = grecaptcha.render(recaptchaContainer, {
+          sitekey: "6LeAGk8rAAAAAG77eJw_s7eid0UjdVftn2tyAPp2"
+        });
+      }
     });
   } else {
     console.error("grecaptcha not loaded");
   }
 
 
+
   // Handle form submission
+
+  if (!form.dataset.listenerAdded) {
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -62,12 +70,12 @@ function setupForm() {
     const recaptchaResponse = grecaptcha.getResponse();
 
     if (!consentCheckbox.checked) {
-      alert("You must agree to the data policy.");
+      alert("Debes aceptar la politica de tratamiento de datos.");
       return;
     }
 
     if (!recaptchaResponse) {
-      alert("Please verify that you are not a robot.");
+      alert("Por favor confirma que no eres un robot.");
       return;
     };
 
@@ -83,7 +91,8 @@ function setupForm() {
         });
       });
 
+      form.dataset.listenerAdded = "true"; // Avoid duplicate listeners
 }
 
 
-
+}

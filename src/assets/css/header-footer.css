@@ -79,6 +79,19 @@
   right: 1.5rem;
 }
 
+.online-services-button{
+  display: none;
+}
+
+.online-services-button-show{
+  display: flex;
+  column-gap: .5rem;
+  color: var(--primary-color);
+  font-weight: var(--font-bold);
+  align-items: center;
+  margin-top: 2rem;
+}
+
 
 /* button */
 .button--menu{
@@ -96,6 +109,14 @@
 .nav__menu-button{
   margin-top: 15px;
 }
+
+
+  /* show menu */
+
+.show-menu{
+  right: 0;
+}
+
 
 
 

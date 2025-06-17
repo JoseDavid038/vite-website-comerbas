@@ -36,6 +36,9 @@ function setupNavButtons(){
   const navMenu = document.getElementById('nav-menu');
   const navDropdown = document.getElementById('nav-drop');
   const navLinks = document.querySelectorAll('.js-nav__link');
+  const onlineServices = document.querySelector('.js-online-services');
+  const navMenu2 = document.querySelector('.js-nav__menu');
+  const navDropdown2 = document.getElementById('nav-drop2');
 
   // Check if the button exists before modifying it
  if (!textCallToActionButton || !iconElement) return;
@@ -80,6 +83,19 @@ function setupNavButtons(){
 }else{
    textCallToActionButton.textContent = textCallToActionButton.dataset.text || "Tienda en línea Comerbas"; // Default text
    iconElement.classList.replace( "ri-device-line" ,"ri-handbag-line"); // Ensure default icon
+
+   navMenu2.classList.add('nav__menu2');
+   onlineServices.classList.add('online-services-button-show');
+
+   onlineServices.addEventListener('click', () =>{
+    // navMenu.classList.add('nav__menu-dropdown');
+    // navDropdown.classList.add('show-menu');
+    navDropdown2.classList.toggle('dropdown__container-desktop');
+    navMenu.classList.toggle('nav__menu-dropdown');
+    navDropdown2.classList.toggle('show-menu');
+   
+  })
+
    
  };
 
@@ -164,6 +180,7 @@ function setupMenu(){
         navToggle = document.getElementById('nav-toggle'),
         navClose = document.getElementById('nav-close');
   const navDropdown = document.getElementById('nav-drop');
+   const navDropdown2 = document.getElementById('nav-drop2');
         // CallToActionButton = document.querySelector('.js-button-menu');
 
     // menu show
@@ -181,6 +198,7 @@ function setupMenu(){
     navMenu.classList.remove('show-menu');
     navMenu.classList.remove('nav__menu-dropdown');
     navDropdown.classList.remove('show-menu');
+    navDropdown2.classList.remove('show-menu');
   })
   }
 

@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // loadComponent2("section-why", "/components/section-fixed.html");
 
+  if (window.location.pathname.includes("ips.html") || window.location.pathname.includes("nosotros.html")) {
+
+  loadComponent2("section-why", "/components/section-fixed.html");
+  
+  }
   
 });
 
