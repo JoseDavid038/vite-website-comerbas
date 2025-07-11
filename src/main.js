@@ -1,5 +1,11 @@
 
 import "./assets/js/header-footer.js";
+import { setupScrollHeader } from './assets/js/scroll-header.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  setupScrollHeader();
+});
+
 import "./assets/js/sections.js";
 import "./assets/js/swiper.js";
 import "./assets/js/contact-form.js";

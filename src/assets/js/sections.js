@@ -19,8 +19,9 @@ async function loadComponent (selector, componentPath, data = {}) {
   if (container.querySelector(".js-section-itemList")) {
     container.querySelector(".js-section-itemList").textContent = data.itemList || "Comerbas";
   }
+  if (container.querySelector(".js-section-button")){
   container.querySelector(".js-section-button").textContent = data.buttonText || "Comerbas";
-  // container.querySelector(".button--services").href = data.buttonLink || "#";
+  }// container.querySelector(".button--services").href = data.buttonLink || "#";
   const button = container.querySelector(".button--services");
   if (button) {
     button.href = data.buttonLink || "#";
@@ -44,7 +45,7 @@ loadComponent("#section-1", "/components/sections.html", {
   paragraph: "Ofrecemos evaluaciones precisas y certificadas permitiéndole a su empresa tomar decisiones informadas y garantizar un entorno laboral seguro.",
   list: ["Evaluación completa de la agudeza visual lejana y cercana", "Pruebas de profundidad visual y discriminación de colores", "Recomendaciones específicas según el puesto de trabajo", "Prevención de riesgos visuales ocupacionales"],
   buttonText: "Contáctanos para saber más",
-  buttonLink: "/index.html"
+  buttonLink: "#contact-form"
 });
 
 
@@ -66,12 +67,12 @@ loadComponent("#section-3", "/components/section3.html", {
   buttonLink: "/index.html"
 });
 
-loadComponent("#section-4", "/components/section3.html", {
+loadComponent("#section-4", "/components/section4.html", {
   image: "../assets/images/services/service-support-sg-sst.png",
   title: "Asesoría e Implementación de Sistemas de Gestión SG-SST",
   paragraph: "Detectamos y evaluamos factores de riesgo críticos que pueden comprometer la seguridad operacional y el cumplimiento normativo, ofreciendo soluciones preventivas adaptadas a su sector.",
   buttonText: "Solicita una asesoria",
-  buttonLink: "/index.html"
+  buttonLink: "#contact-form"
 });
 
 loadComponent("#section-5", "/components/section5.html", {
@@ -79,15 +80,15 @@ loadComponent("#section-5", "/components/section5.html", {
   title: "Exámenes Médicos de Ingreso Completos y Certificados",
   paragraph: "Ofrecemos atención médica especializada con resultados rápidos y confiables.Nuestros profesionales realizan evaluaciones integrales que cumplen todas las normativas vigentes en salud ocupacional.",
   buttonText: "Conoce nuestra IPS",
-  buttonLink: "/index.html"
+  buttonLink: "./ips.html"
 });
 
 loadComponent("#section-6", "/components/section5.html", {
   image: "../assets/images/testimonials/mision.png",
-  title: "Nuestra Misión",
-  paragraph: "Proporcionar servicios de salud ocupacional y soluciones financieras de alta calidad que mejoren la productividad de las empresas y la calidad de vida de sus colaboradores, a través de procesos ágiles, tecnología avanzada y un equipo humano comprometido con la excelencia.",
+  title: "Nuestra Propósito",
+  paragraph: "Ofrecemos productos y servicios que mejoran la calidad de vida de los colaboradores y sus familias.",
   buttonText: "Contáctanos para saber más",
-  buttonLink: "/index.html"
+  buttonLink: "#contact-form"
 });
 
 loadComponent("#section-7", "/components/section6.html", {
@@ -101,7 +102,7 @@ loadComponent("#section-7", "/components/section6.html", {
 loadComponent("#section-8", "/components/section6.html", {
   image: "../assets/images/services/service-dreams.png",
   title: "Ayuda a tu equipo a cumplir sus sueños con nosotros",
-  paragraph: "Ofrecemos un gran portafolio de créditos que tus empleados pueden cumplir sus poryectos. Nosotros nos encargamos de todo.",
+  paragraph: "Ofrecemos un gran portafolio de créditos para que tus empleados puedan cumplir sus proyectos. Nosotros nos encargamos de todo.",
   buttonText: "Contáctanos para saber más",
   buttonLink: "/index.html"
 });

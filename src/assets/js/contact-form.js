@@ -26,12 +26,15 @@ function changeTitle(){
    const titleForm = document.querySelector('.js-title-form');
    const paragraphForm = document.querySelector('.js-paragraph-form');
 
-   if (window.location.pathname.includes("ips.html")|| window.location.pathname.includes("nosotros.html") ){
-    titleForm.textContent = "Mejore la gestión de salud ocupacional en su empresa";
-    paragraphForm.textContent = "Contamos con profesionales certificados y tecnología avanzada para realizar evaluaciones precisas, rápidas y confiables.";
+   if (window.location.pathname.includes("ips.html")){
+    titleForm.textContent = "Mejora la salud ocupacional en tu empresa";
+    paragraphForm.textContent = "contáctanos, estamos para brindarte el mejor servicio.";
+   }else if (window.location.pathname.includes("index.html")){
+    titleForm.textContent = "Estamos para ayudarte";
+    paragraphForm.textContent = "Contáctanos,  Somos felices en brindarte ayuda en lo que necesites.";
    }else{
-    titleForm.textContent = "Contáctanos";
-    paragraphForm.textContent = "Estamos felices en brindarte ayuda en lo que necesites.";
+    titleForm.textContent = "Mejora el bienestar de tu empresa";
+    paragraphForm.textContent = "contáctanos, estamos para brindarte el mejor servicio.";
    }
 }
 
@@ -45,16 +48,30 @@ function setupForm() {
   if (!form || !recaptchaContainer) return;
 
   // Render the reCAPTCHA
+  // if (typeof grecaptcha !== "undefined") {
+  //   grecaptcha.ready(() => {
+  //     if (recaptchaWidgetId === null) {
+  //       recaptchaWidgetId = grecaptcha.render(recaptchaContainer, {
+  //         sitekey: "6LeAGk8rAAAAAG77eJw_s7eid0UjdVftn2tyAPp2"
+  //       });
+  //     }
+  //   });
+  // } else {
+  //   console.error("grecaptcha not loaded");
+  // }
+
+
   if (typeof grecaptcha !== "undefined") {
-    grecaptcha.ready(() => {
-      if (recaptchaWidgetId === null) {
-        recaptchaWidgetId = grecaptcha.render(recaptchaContainer, {
-          sitekey: "6LeAGk8rAAAAAG77eJw_s7eid0UjdVftn2tyAPp2"
-        });
-      }
-    });
-  } else {
-    console.error("grecaptcha not loaded");
+  grecaptcha.ready(() => {
+    // Verifica si el contenedor ya tiene contenido renderizado (previene doble renderizado)
+    if (recaptchaContainer.innerHTML.trim() === "") {
+      recaptchaWidgetId = grecaptcha.render(recaptchaContainer, {
+        sitekey: "6LeAGk8rAAAAAG77eJw_s7eid0UjdVftn2tyAPp2"
+      });
+    } else {
+      console.log("reCAPTCHA ya renderizado");
+    }
+      });
   }
 
 

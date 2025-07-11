@@ -43,8 +43,30 @@ function setupNavButtons(){
   // Check if the button exists before modifying it
  if (!textCallToActionButton || !iconElement) return;
 
- if (window.location.pathname.includes("empresas.html")) {
+  // show or hid the botton online services. 
+ if (onlineServices) {
+  if (!window.location.pathname.includes("index.html")) {
+    // No mostrar ni ocupar espacio
+    onlineServices.classList.remove("online-services-button-show");
+    onlineServices.remove();
+    navMenu2.style.gap = "0"; // elimina espacio entre elementos
+    navMenu2.style.justifyContent = "space-around"; // cambia de space-between
 
+  } else {
+    // show the button.
+    onlineServices.classList.add("online-services-button-show");
+    onlineServices.addEventListener('click', () => {
+        navDropdown2.classList.toggle('dropdown__container-desktop');
+        navMenu.classList.toggle('nav__menu-dropdown');
+        navDropdown2.classList.toggle('show-menu');
+      });
+
+  }
+ }
+
+
+ if (window.location.pathname.includes("empresas.html")) {
+  
    textCallToActionButton.textContent = "Trámites empresariales";
    // Remove any existing <i> before adding a new one
    iconElement.classList.replace("ri-handbag-line", "ri-device-line");
@@ -56,6 +78,7 @@ function setupNavButtons(){
     navDropdown.classList.toggle('dropdown__container-desktop');
     navMenu.classList.toggle('nav__menu-dropdown');
     navDropdown.classList.toggle('show-menu');
+
    
   })
 
@@ -68,7 +91,7 @@ function setupNavButtons(){
     // Redirect **when the button is clicked**
     textCallToActionButton.closest(".nav__link").addEventListener('click', function(event) {
      event.preventDefault(); // Prevent default link behavior
-     window.location.href = "/pages/afiliate.html";
+     window.location.href = "#contact-form";
     });
 
  }else if (window.location.pathname.includes("nosotros.html")){
@@ -77,7 +100,7 @@ function setupNavButtons(){
    // Redirect **when the button is clicked**
    textCallToActionButton.closest(".nav__link").addEventListener('click', function(event) {
     event.preventDefault(); // Prevent default link behavior
-    window.location.href = "/pages/afiliate.html";
+    window.location.href = "#contact-form";
    });
 
 }else{
@@ -85,17 +108,21 @@ function setupNavButtons(){
    iconElement.classList.replace( "ri-device-line" ,"ri-handbag-line"); // Ensure default icon
 
    navMenu2.classList.add('nav__menu2');
-   onlineServices.classList.add('online-services-button-show');
 
-   onlineServices.addEventListener('click', () =>{
-    // navMenu.classList.add('nav__menu-dropdown');
-    // navDropdown.classList.add('show-menu');
-    navDropdown2.classList.toggle('dropdown__container-desktop');
-    navMenu.classList.toggle('nav__menu-dropdown');
-    navDropdown2.classList.toggle('show-menu');
-   
-  })
+   textCallToActionButton.closest(".nav__link").addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    window.location.href = "/index.html";
+    });
+    // if (onlineServices) {
+    //   onlineServices.classList.add('online-services-button-show');
 
+    //   onlineServices.addEventListener('click', () =>{
+    //   navDropdown2.classList.toggle('dropdown__container-desktop');
+    //   navMenu.classList.toggle('nav__menu-dropdown');
+    //   navDropdown2.classList.toggle('show-menu');
+    
+    //   });
+    // }
    
  };
 

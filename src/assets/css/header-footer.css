@@ -15,6 +15,11 @@
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--white-color);
+  transition: transform 0.3s ease;
+}
+
+.header--hidden {
+  transform: translateY(-100%);
 }
 
 .nav{
@@ -90,6 +95,7 @@
   font-weight: var(--font-bold);
   align-items: center;
   margin-top: 2rem;
+  cursor: pointer;
 }
 
 
