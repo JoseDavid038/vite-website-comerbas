@@ -135,3 +135,20 @@
   color: var(--background-dark-blue);
   
 }
+
+
+
+/* Tamaño y color base */
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background-color: var(--your-bullet-color, #ccc); /* Cambia este valor */
+  opacity: 1;
+  margin: 0 6px;
+}
+
+/* Bullet activo (slide actual) */
+.swiper-pagination-bullet-active {
+  background-color: var(--your-bullet-active-color, #004080); /* Cambia este valor */
+  transform: scale(1.2); /* Opcional: agranda ligeramente el bullet activo */
+}

@@ -26,6 +26,19 @@
   min-height: 180px;
 }
 
+.dropdown__group2{
+  background: var(--white-color);
+  border-radius: 16px;
+  padding-inline: 12px;
+  padding-top: 12px;
+  padding-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  min-height: 180px;
+}
+
 .dropdown__title{
   font-size: var(--font-small);
   font-weight: var(--font-extrabold);
@@ -67,3 +80,5 @@
   padding-block: 8px;
   align-self: center;
 }
+
+

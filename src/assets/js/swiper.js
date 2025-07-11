@@ -11,7 +11,7 @@ import 'swiper/css/bundle';
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
-      delay: 9000,
+      delay: 3000,
       disableOnInteraction: true,
     },
     pagination: {
