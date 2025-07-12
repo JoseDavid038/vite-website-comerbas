@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (window.location.pathname.includes("ips.html")) {
 
-      loadComponent2("section-why", "/components/section-fixed.html");
+      loadComponent2("section-why", "components/section-fixed.html");
  
   
   }else if (window.location.pathname.includes("nosotros.html")){
-      loadComponent2("section-why2", "/components/section-fixed2.html");
+      loadComponent2("section-why2", "components/section-fixed2.html");
  
   }
   

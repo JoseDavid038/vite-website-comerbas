@@ -1,7 +1,7 @@
 import emailjs from '@emailjs/browser';
 
 document.addEventListener('DOMContentLoaded', function() {
-  loadComponent("contact-form", "/components/contact-form.html" , () => {
+  loadComponent("contact-form", "components/contact-form.html" , () => {
     changeTitle();
     setupForm();
       
