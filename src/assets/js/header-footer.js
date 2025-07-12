@@ -183,7 +183,7 @@ document.addEventListener('click', function(event) {
 
    textCallToActionButton.closest(".nav__link").addEventListener('click', function(event) {
     event.preventDefault(); // Prevent default link behavior
-    window.location.href = "/index.html";
+    window.location.href = "index.html";
     });
     // if (onlineServices) {
     //   onlineServices.classList.add('online-services-button-show');
@@ -226,10 +226,10 @@ function setNavLinks(){
     // handle navigation links
 
       const pageMap = {
-        "Para Empresas": "/src/pages/empresas.html",
-        "Para Personas": "/src/pages/index.html",
-        "IPS": "/src/pages/ips.html",
-        "Sobre nosotros": "/src/pages/nosotros.html",
+        "Para Empresas": "/empresas.html",
+        "Para Personas": "/index.html",
+        "IPS": "/ips.html",
+        "Sobre nosotros": "/nosotros.html",
       };
 
        // Add active class based on the current page
@@ -262,10 +262,10 @@ function setNavLinks2(){
     // handle navigation links
 
       const pageMap = {
-        "Para Empresas": "/src/pages/empresas.html",
-        "Para Personas": "/src/pages/index.html",
-        "IPS": "/src/pages/ips.html",
-        "Sobre nosotros": "/src/pages/nosotros.html",
+        "Para Empresas": "/empresas.html",
+        "Para Personas": "/index.html",
+        "IPS": "/ips.html",
+        "Sobre nosotros": "/nosotros.html",
         "Protección de Datos": "/public/docs/Politica_tratamiento_datos.pdf"
       };
 
