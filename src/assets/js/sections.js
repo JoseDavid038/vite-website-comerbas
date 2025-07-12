@@ -38,7 +38,6 @@ async function loadComponent (selector, componentPath, data = {}) {
 
 
 
-
 loadComponent("#section-1", "components/sections.html", {
   image: "images/services/service-optometria-test.png",
   title: "Optometria laboral",

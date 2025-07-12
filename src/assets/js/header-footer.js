@@ -39,8 +39,13 @@ function setupNavButtons(){
 
   if (!textCallToActionButton || !iconElement) return;
 
+
+  // charge index.html with all features
+  const pathname = window.location.pathname;
+  const isHomePage = pathname.endsWith("/") || pathname.includes("index.html");
+
   if (onlineServices) {
-    if (!(window.location.pathname === "/" || window.location.pathname.includes("index.html"))) {
+    if (!isHomePage) {
       onlineServices.classList.remove("online-services-button-show");
       onlineServices.remove();
       navMenu2.style.gap = "0";
@@ -54,6 +59,7 @@ function setupNavButtons(){
       });
     }
   }
+
 
   document.addEventListener('click', function(event) {
     const dropdown1 = document.getElementById('nav-drop');
@@ -121,7 +127,7 @@ function setupNavButtons(){
 
 function setNavLinks() {
   const navLinks = document.querySelectorAll('.js-nav__link');
-  const base = getBasePath();
+  const base = getBasePath(); // por ejemplo: "/vite-website-comerbas/"
 
   const pageMap = {
     "Para Empresas": base + "empresas.html",
@@ -130,21 +136,28 @@ function setNavLinks() {
     "Sobre nosotros": base + "nosotros.html",
   };
 
+  const currentPath = window.location.pathname;
+
   navLinks.forEach(link => {
-    if (window.location.href === pageMap[link.textContent.trim()]) {
+    const linkText = link.textContent.trim();
+    const expectedPath = new URL(pageMap[linkText], window.location.origin).pathname;
+
+    // ✅ Comparamos solo el pathname sin query ni hash
+    if (currentPath === expectedPath) {
       navLinks.forEach(l => l.classList.remove("active-link"));
       link.classList.add("active-link");
     }
 
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-      const page = link.textContent.trim();
-      if (pageMap[page]) {
-        window.location.href = pageMap[page];
-      }
-    });
+    // 🚫 Evita errores si el texto no coincide
+    if (pageMap[linkText]) {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        window.location.href = pageMap[linkText];
+      });
+    }
   });
 }
+
 
 function setNavLinks2() {
   const navLinks = document.querySelectorAll('.js-nav__link');
