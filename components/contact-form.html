@@ -1,0 +1,38 @@
+<section class="contact section" id="contact-form">
+
+  <div class="contact__content section__container section__content">
+    <h2 class="section__title js-title-form"></h2>
+    <p class="js-paragraph-form"></p>
+    <form class="contact-form" id="contact__form" method="POST">
+      <input type="text" placeholder="Escribe tu nombre" name="name" required>
+      <input type="email" placeholder="Ingresa tu correo electrónico" name="email" required>
+      <input type="tel" placeholder="Ingresa tu número de teléfono" name="phone" required>
+      <select name="service" required>
+        <option value="">Selecciona el servicio que te interesa</option>
+        <option value="servicio_exequial">Servicio Exequial</option>
+        <option value="bonos_de_mercado">Bonos de Mercado</option>
+        <option value="telemedicina">Telemedicina</option>
+        <option value="creditos">Créditos y financiación</option>
+        <option value="sg-sst">Sistemas de Gestión SG-SST</option>
+        <option value="afiliacion">Afiliar Empresa</option>
+        <option value="otros">Otros</option>
+      </select>
+      <textarea placeholder="Escribe tu mensaje" rows="7" name="message" required></textarea>
+
+      <label for="data-consent" class="form-checkbox law__content">
+        <input type="checkbox" id="data-consent" name="data-consent" required>
+        <p>De acuerdo con la ley 1581 de 2012 de Protección de datos personales, he leído, entendido y acepto, los términos descritos en la  
+        <strong><a href="/public/docs/Politica_tratamiento_datos.pdf" target="_blank">Política de Tratamiento de Datos Personales</a>.</strong></p>
+      </label>
+
+      <div id="recaptcha-container" class="g-recaptcha" data-sitekey="6LeAGk8rAAAAAG77eJw_s7eid0UjdVftn2tyAPp2"></div>
+
+      <div>
+        <button type="submit" class="button button--section">
+        Enviar mensaje
+        <i class="ri-arrow-right-line"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
