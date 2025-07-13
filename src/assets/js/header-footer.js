@@ -111,7 +111,8 @@ function setupNavButtons(){
 
     textCallToActionButton.closest(".nav__link").addEventListener('click', function(event) {
       event.preventDefault();
-      window.location.href = "index.html";
+      // window.location.href = "expectativa.html";
+      window.open("expectativa.html", "_blank", "noopener");
     });
   }
 
