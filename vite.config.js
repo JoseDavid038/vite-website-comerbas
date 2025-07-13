@@ -13,7 +13,8 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         empresas: resolve(__dirname, 'empresas.html'),
         nosotros: resolve(__dirname, 'ips.html'),
-        contacto: resolve(__dirname, 'nosotros.html')
+        contacto: resolve(__dirname, 'nosotros.html'),
+        expectativa: resolve(__dirname, 'expectativa.html')
       }
     }
   },

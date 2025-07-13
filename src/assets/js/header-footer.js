@@ -112,7 +112,9 @@ function setupNavButtons(){
     textCallToActionButton.closest(".nav__link").addEventListener('click', function(event) {
       event.preventDefault();
       // window.location.href = "expectativa.html";
-      window.open("expectativa.html", "_blank", "noopener");
+      // window.open("expectativa.html", "_blank", "noopener");
+      window.open(`${window.location.origin}${window.location.pathname.replace(/[^/]*$/, '')}expectativa.html`, "_blank", "noopener");
+
     });
   }
 
