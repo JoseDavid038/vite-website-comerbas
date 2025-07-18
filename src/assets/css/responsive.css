@@ -518,7 +518,8 @@
   }
 
   .section__subtitle-tabs{
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+    font-weight: var(--font-semibold);
   }
 
   .tab-empresas > h2,

@@ -97,7 +97,7 @@ function setupForm() {
     };
 
 
-  emailjs.sendForm('service_m1pa9ia', 'template_zdq9of5', this, 'K0jm7Mkr3VCbKfM0l')
+  emailjs.sendForm('service_n3ikulq', 'template_zdq9of5', this, 'K0jm7Mkr3VCbKfM0l')
         .then(() => {
           alert('Mensaje enviado con éxito.');
           form.reset();
