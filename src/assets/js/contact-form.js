@@ -28,13 +28,13 @@ function changeTitle(){
 
    if (window.location.pathname.includes("ips.html")){
     titleForm.textContent = "Mejora la salud ocupacional en tu empresa";
-    paragraphForm.textContent = "contáctanos, estamos para brindarte el mejor servicio.";
+    paragraphForm.textContent = "Contáctanos, estamos aquí para brindarte el mejor servicio.";
    }else if (window.location.pathname.includes("index.html")){
     titleForm.textContent = "Estamos para ayudarte";
-    paragraphForm.textContent = "Contáctanos,  Somos felices en brindarte ayuda en lo que necesites.";
+    paragraphForm.textContent = "Contáctanos. Nos hace felices poder ayudarte en lo que necesites.";
    }else{
-    titleForm.textContent = "Mejora el bienestar de tu empresa";
-    paragraphForm.textContent = "contáctanos, estamos para brindarte el mejor servicio.";
+    titleForm.textContent = "Impulsa el bienestar de tu empresa";
+    paragraphForm.textContent = "Contáctanos, estamos aquí para brindarte el mejor servicio.";
    }
 }
 
