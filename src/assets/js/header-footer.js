@@ -136,7 +136,7 @@ function setNavLinks() {
     "Para Empresas": base + "empresas.html",
     "Para Personas": base + "index.html",
     "IPS": base + "ips.html",
-    "Sobre nosotros": base + "nosotros.html",
+    "Sobre Nosotros": base + "nosotros.html",
   };
 
   const currentPath = window.location.pathname;
@@ -170,7 +170,7 @@ function setNavLinks2() {
     "Para Empresas": base + "empresas.html",
     "Para Personas": base + "index.html",
     "IPS": base + "ips.html",
-    "Sobre nosotros": base + "nosotros.html",
+    "Sobre Nosotros": base + "nosotros.html",
     "Protección de Datos": base + "docs/Politica_tratamiento_datos.pdf"
   };
 
@@ -178,8 +178,15 @@ function setNavLinks2() {
     link.addEventListener("click", function (event) {
       event.preventDefault();
       const page = link.textContent.trim();
-      if (pageMap[page]) {
-        window.location.href = pageMap[page];
+      const url = pageMap[page];
+      
+      if (!url) return;
+
+      // 👉 Si es un PDF, abrir en una pestaña nueva
+      if (page === "Protección de Datos") {
+        window.open(url, "_blank", "noopener");
+      } else {
+        window.location.href = url;
       }
     });
   });
