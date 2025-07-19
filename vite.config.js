@@ -17,7 +17,8 @@ export default defineConfig({
         empresas: resolve(__dirname, 'empresas.html'),
         nosotros: resolve(__dirname, 'nosotros.html'),
         ips: resolve(__dirname, 'ips.html'),
-        expectativa: resolve(__dirname, 'expectativa.html')
+        expectativa: resolve(__dirname, 'expectativa.html'),
+        expectativa2: resolve(__dirname, 'expectativa2.html')
       }
     }
   },
