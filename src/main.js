@@ -21,7 +21,7 @@ import "./assets/css/base.css";
 import "./assets/css/sections.css";
 import "./assets/css/dropdown.css";
 import "./assets/css/empresas.css";
-import "./assets/css/responsive.css";
+import "./assets/css/responsive2.css";
 import "./assets/css/ips.css";
 
 

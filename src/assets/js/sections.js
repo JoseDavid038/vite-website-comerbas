@@ -41,7 +41,7 @@ async function loadComponent (selector, componentPath, data = {}) {
 loadComponent("#section-1", "components/sections.html", {
   image: "images/services/service-optometria-test.webp",
   title: "Optometría Laboral",
-  paragraph: "Ofrecemos evaluaciones precisas y certificadas que le permiten a tu empresa tomar decisiones informadas y garantizar un entorno laboral seguro.",
+  paragraph: "Ofrecemos evaluaciones precisas y certificadas que le permiten a tu empresa tomar la mejor decisión y garantizar un entorno laboral seguro.",
   list: ["Evaluación completa de la agudeza visual lejana y cercana.", "Pruebas de percepción de profundidad y discriminación de colores.", "Recomendaciones específicas según el puesto de trabajo.", "Prevención de riesgos visuales ocupacionales."],
   buttonText: "Contáctanos para saber más",
   buttonLink: "#contact-form"
@@ -52,7 +52,7 @@ loadComponent("#section-2", "components/section2.html", {
   image: "images/services/service-psicology.webp",
   title: "Psicología Laboral",
   paragraph: "Evaluamos los factores psicosociales que influyen en el desempeño y bienestar de tus colaboradores, identificando fortalezas y oportunidades de mejora para optimizar el ambiente laboral.",
-  list: ["Evaluación de riesgos bio-psicosociales.", "Pruebas psicotécnicas laborales.", "Capacitación en salud mental laboral.", "Control de sustancias psicoactivas y pruebas de alcoholimetría."],
+  list: ["Evaluación de riesgos bio-psicosociales.", "Pruebas psicotécnicas laborales.", "Capacitación en salud mental laboral."],
   buttonText: "Contáctanos para saber más",
   buttonLink: "index.html"
 });
