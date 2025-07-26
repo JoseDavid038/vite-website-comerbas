@@ -49,10 +49,10 @@ loadComponent("#section-1", "components/sections.html", {
 
 
 loadComponent("#section-2", "components/section2.html", {
-  image: "images/services/service-psicology.webp",
-  title: "Psicología Laboral",
-  paragraph: "Evaluamos los factores psicosociales que influyen en el desempeño y bienestar de tus colaboradores, identificando fortalezas y oportunidades de mejora para optimizar el ambiente laboral.",
-  list: ["Evaluación de riesgos bio-psicosociales.", "Pruebas psicotécnicas laborales.", "Capacitación en salud mental laboral."],
+  image: "images/services/service-laboratory.webp",
+  title: "Laboratorio Clínico",
+  paragraph: "En Comerbas contamos con un completo servicio de laboratorio clínico que permite a tu empresa acceder a pruebas confiables para el seguimiento de la salud de tus colaboradores. Facilitamos diagnósticos oportunos y brigadas en sitio, adaptándonos a tus necesidades operativas.",
+  list: ["Pruebas toxicológicas (individual y brigadas)", "Pruebas de alcoholimetría","Perfil lipídico y glicemia", "Hemograma completo", "Exámenes de laboratorio general (orina, coprológico, creatinina, etc.)","Pruebas especializadas (reticulocitos, frotis, KOH)","Serología (individual y brigada)"],
   buttonText: "Contáctanos para saber más",
   buttonLink: "index.html"
 });
