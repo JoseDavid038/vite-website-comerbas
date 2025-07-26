@@ -94,6 +94,33 @@ function updateActiveTab(activeIndex) {
 }
 
 
+// Swiper para sección de comentarios
+  // const swiperReviews = new Swiper(".mySwiperReviews", {
+  //   modules: [Navigation, Pagination],
+  //   spaceBetween: 30,
+  //   centeredSlides: true,
+  //   autoplay: {
+  //     delay: 3000,
+  //     disableOnInteraction: true,
+  //   },
+  //   pagination: {
+  //     el: ".mySwiperReviews .swiper-pagination",
+  //     clickable: true,
+  //   },
+  // breakpoints: {
+  
+  //     640: {
+  //       slidesPerView: 1,
+  //       spaceBetween: 20,
+  //     },
+    
+  //     1024: {
+  //       slidesPerView: 1,
+  //       spaceBetween: 30,
+  //     }
+  //   }
+  // });
+
 
 
 
