@@ -7,10 +7,10 @@ faq.forEach( question => {
 
     // answer
     let body = this.nextElementSibling;
-    if (body.style.maxHeight === "300px"){
+    if (body.style.maxHeight === "500px"){
       body.style.maxHeight = "0px";
     }else {
-      body.style.maxHeight = "300px";
+      body.style.maxHeight = "500px";
     }
   })
 })
