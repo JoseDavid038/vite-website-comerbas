@@ -37,6 +37,8 @@ function setupNavButtons(){
   const navDropdown2 = document.getElementById('nav-drop2');
   const onlineServices = document.querySelector('.js-online-services');
 
+  const calltoActionButtonIndex = document.querySelector('.nav__menu-button');
+
   if (!textCallToActionButton || !iconElement) return;
 
 
@@ -108,7 +110,7 @@ function setupNavButtons(){
     textCallToActionButton.textContent = textCallToActionButton.dataset.text || "Tienda en línea Comerbas";
     iconElement.classList.replace("ri-device-line", "ri-handbag-line");
     navMenu2.classList.add('nav__menu2');
-    textCallToActionButton.classList.add('nav__menu-button3');
+    calltoActionButtonIndex.classList.add('nav__menu-button3');
     textCallToActionButton.closest(".nav__link").addEventListener('click', function(event) {
       event.preventDefault();
       // window.location.href = "expectativa.html";
