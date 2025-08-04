@@ -543,7 +543,8 @@
   .tab-personas > h2,
   .tab-personas > p,
   .tab-personas > ul {
-  width: 700px;
+  width: auto;
+  max-width: 90%;
   }
 
 
@@ -551,6 +552,7 @@
   .tab-info-container > ul{
     color: var(--text-light-gray); 
     font-size: 1rem;
+    width: auto;
   }
 
   .appliaces-container{
@@ -1244,6 +1246,15 @@ video{
     width: clamp(300px, 90vw, 590px);
     line-height: 1.8rem;
     font-weight: var(--font-medium);
+  }
+
+  .tab-info-container.optometria{
+    width: auto;
+    max-width: 80%;
+  }
+
+  .js-section-paragraph.ips{
+    width: auto;
   }
 
 }
