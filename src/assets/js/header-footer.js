@@ -27,6 +27,7 @@ function getBasePath() {
 }
 
 // Function to update the call-to-action button in the navbar
+// Function to update the call-to-action button in the navbar
 function setupNavButtons(){
   const textCallToActionButton = document.querySelector('.js-text-button');
   const iconElement = document.querySelector('.js-ri-handbag-line');
@@ -41,18 +42,21 @@ function setupNavButtons(){
 
   if (!textCallToActionButton || !iconElement) return;
 
-
   // charge index.html with all features
   const pathname = window.location.pathname;
+  // Aseguramos que detecte tanto la raíz "/" como "index.html"
   const isHomePage = pathname.endsWith("/") || pathname.includes("index.html");
 
+  // Lógica para "Servicios en línea" (el texto/icono azul)
   if (onlineServices) {
     if (!isHomePage) {
+      // Si NO es home, lo eliminamos para ganar espacio
       onlineServices.classList.remove("online-services-button-show");
-      onlineServices.remove();
+      onlineServices.remove(); 
       navMenu2.style.gap = "0";
       navMenu2.style.justifyContent = "space-around";
     } else {
+      // Si ES home, lo mostramos
       onlineServices.classList.add("online-services-button-show");
       onlineServices.addEventListener('click', () => {
         navDropdown2.classList.toggle('dropdown__container-desktop');
@@ -62,8 +66,9 @@ function setupNavButtons(){
     }
   }
 
-
+  // --- Manejo de clics fuera del menú (sin cambios) ---
   document.addEventListener('click', function(event) {
+    // ... (tu código existente aquí sin cambios) ...
     const dropdown1 = document.getElementById('nav-drop');
     const dropdown2 = document.getElementById('nav-drop2');
     const menu = document.getElementById('nav-menu');
@@ -86,6 +91,9 @@ function setupNavButtons(){
     }
   });
 
+
+  // --- Lógica del botón verde principal ---
+
   if (window.location.pathname.includes("empresas.html")) {
     textCallToActionButton.textContent = "Trámites empresariales";
     iconElement.classList.replace("ri-handbag-line", "ri-device-line");
@@ -107,19 +115,21 @@ function setupNavButtons(){
     });
 
   } else {
-    textCallToActionButton.textContent = textCallToActionButton.dataset.text || "Tienda en línea Comerbas";
+    // --- LÓGICA PARA INDEX.HTML (PÁGINA PRINCIPAL) ---
+    textCallToActionButton.textContent = textCallToActionButton.dataset.text || "Tienda en línea";
     iconElement.classList.replace("ri-device-line", "ri-handbag-line");
     navMenu2.classList.add('nav__menu2');
-    calltoActionButtonIndex.classList.add('nav__menu-button3');
+    
+    // ❌ ELIMINADA: Esta línea era la que ocultaba el botón
+    // calltoActionButtonIndex.classList.add('nav__menu-button3'); 
+
     textCallToActionButton.closest(".nav__link").addEventListener('click', function(event) {
       event.preventDefault();
-      // window.location.href = "expectativa.html";
-      // window.open("expectativa.html", "_blank", "noopener");
       window.open(`${window.location.origin}${window.location.pathname.replace(/[^/]*$/, '')}expectativa.html`, "_blank", "noopener");
-
     });
   }
 
+  // Resto del código (dropdown buttons) sin cambios...
   const dropdownButtons = document.querySelectorAll('#nav-drop2 .button');
   dropdownButtons.forEach(button => {
     button.addEventListener('click', () => {

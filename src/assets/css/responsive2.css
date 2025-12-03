@@ -185,10 +185,12 @@
 
 
   .nav{
+    /* Altura definida y Flexbox para el contenedor mayor */
     height: calc(var(--header-height) + 2.3rem);
     margin-inline: 1.5rem;
-    display: grid;
-    grid-template-columns: 20% 80%;
+    display: flex; /* Usamos Flex en lugar de Grid para mejor control de flujo */
+    justify-content: space-between; /* Logo a la izq, Menú a la der */
+    align-items: center; /* Alineación vertical perfecta del logo con el resto */
   }
 
   .logo{
@@ -205,42 +207,51 @@
   } */
 
   .nav__menu {
-    width: 100%;
+    /* El menú ocupa todo el espacio restante a la derecha del logo */
+    flex: 1; 
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap; 
+    align-items: center; /* Alineación vertical CENTRADA para lista, texto y botón */
+    justify-content: flex-end; /* Por defecto empuja todo a la derecha */
+    gap: 1rem; /* Espacio mínimo seguro entre elementos */
+    margin-left: 2rem; /* Separación del logo */
   }
 
   .online-services-button-show{
-    margin-top: 0rem;
+    margin: 0; /* Quitamos margin-top/bottom antiguos */
+    display: flex;
+    align-items: center;
+    height: auto;
+    white-space: nowrap; /* Evita que el texto se parta en dos líneas */
   }
 
   .nav__list{
+    display: flex;
     flex-direction: row;
-    justify-content: center;
+    align-items: center;
     background: var(--white-color);
-    padding: 0.3rem 0.3rem;
-    width: 40.625rem;
-    border-style: solid;
-    border-color: lightgray;
-    border-width: 1px;
-    border-radius: 2rem;
-    justify-self: center;
-    margin-top: 3px;
+    padding: 0.4rem;  /* Espacio entre el borde gris y los botones verdes */
+    gap: 0.2rem;      /* Pequeño espacio entre cada opción de texto */
+    width: fit-content;
+    border: 1px solid lightgray;
+    border-radius: 3rem;
+    margin-top: 0; /* Aseguramos que no haya margen superior */
+    
+    /* TRUCO DE CENTRADO SEGURO: */
+    /* Empuja hacia la derecha desde el logo */
+    margin-left: auto; 
+    /* Empuja hacia la izquierda desde los botones, PERO... */
+    /* Si no hay espacio, este margen se colapsa para evitar desbordamiento */
+    margin-right: auto;
   }
 
 
   .nav__link-desktop{
-    text-align: center;
+    padding: 0.8rem 1.5rem;
+    font-size: var(--font-normal); /* O usa 0.95rem si prefieres */
+    font-weight: var(--font-normal); /* Letra un poco más gruesa (Semi-bold) para mejor lectura */
+    line-height: normal; /* Deja que el texto respire */
+    margin: 0;
     border-radius: 2rem;
-    padding: .9rem 1.5rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    width: 10rem;
-    font-size: var(--small-font-size);
-    font-weight: var(--font-regular);
   }
 
   .active-link{
@@ -254,9 +265,10 @@
   }
 
   .nav__menu-button{
-    justify-self: end;
+    margin: 0; /* CRUCIAL: Eliminar margin-top: 15px heredado */
+    display: inline-flex;
     align-items: center;
-    margin-bottom: 5px;
+    align-self: center; /* Refuerzo de alineación vertical */
   }
 
   /* dropdown menu */
@@ -325,12 +337,13 @@
   }
 
   .button--menu{
-    display: inline-flex;
-    background: var(--primary-color);
-    padding: 1.2rem 2rem;
-    font-weight: var(--font-regular);
-    border-radius: 2rem;
-    margin-bottom: 20px;
+    padding: 0.8rem 1.5rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    line-height: 1; /* Centra el texto dentro del botón */
+    white-space: nowrap; /* Evita que el botón se deforme */
   }
 
   .main {
@@ -1210,7 +1223,7 @@ video{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     flex-wrap: wrap; 
   }
 
@@ -1257,6 +1270,37 @@ video{
     width: auto;
   }
 
+}
+
+
+/* Ajuste "Salvavidas" para pantallas medianas donde todo se amontona */
+@media screen and (min-width: 1150px) and (max-width: 1350px) {
+    
+    /* Reducimos el padding de la pastilla del menú */
+    .nav__list {
+        padding: 0.3rem 0.5rem;
+    }
+    
+    /* Reducimos el tamaño de letra de los enlaces */
+    .nav__link-desktop {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Reducimos el espacio entre elementos */
+    .nav__menu {
+        gap: 0.5rem; 
+        margin-left: 0.5rem;
+    }
+    
+    /* Hacemos el botón un poco más compacto */
+    .button--menu {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Opcional: Ocultar el ícono del botón si es necesario para ganar espacio */
+    /* .button--menu i { display: none; } */
 }
 
 
