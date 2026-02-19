@@ -405,3 +405,92 @@ video{
   display: flex;
   justify-content: center;
 }
+
+
+/* ===========================
+   MODAL MAIN 
+   Mobile First
+=========================== */
+.promo-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Un poco más oscuro para resaltar la publicidad */
+  display: none; /* Se activa con JS */
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; /* Z-index mayor para estar seguro */
+  padding: 15px; /* Padding pequeño para pantallas chicas */
+  backdrop-filter: blur(2px); /* Efecto moderno de desenfoque de fondo */
+}
+
+.promo-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Ancho máximo ideal para pieza vertical */
+  background: transparent; /* Fondo transparente para que luzca la imagen */
+  border-radius: 12px;
+  text-align: center;
+  animation: promoPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes promoPop {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Imagen responsive */
+.promo-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* Botón de cerrar (Círculo blanco) */
+.promo-close {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  background: #fff;
+  color: #333;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 35px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  z-index: 2;
+  transition: transform 0.2s;
+  text-align: center;
+}
+
+.promo-close:hover {
+  transform: scale(1.1);
+  background: #f0f0f0;
+}
+
+
+
+/* ===========================
+   RESPONSIVE (Desktop adjustments)
+=========================== */
+@media (min-width: 768px) {
+  .promo-container {
+    max-width: 800px; /* Un poco más grande en PC */
+  }
+  
+  .promo-close {
+    top: -20px;
+    right: -10px;
+    width: 40px;
+    height: 40px;
+    font-size: 35px;
+    text-align: center;
+  }
+}

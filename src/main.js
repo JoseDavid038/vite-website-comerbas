@@ -12,6 +12,7 @@ import "./assets/js/contact-form.js";
 import "./assets/js/faqs.js";
 import "./assets/js/sections-fixed.js";
 import "./assets/js/swiper-bundle.min.js";
+import "./assets/js/modal-main.js";
 
 import "./assets/css/variables.css";
 import "./assets/css/header-footer.css";
