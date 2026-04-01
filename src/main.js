@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 import "./assets/js/sections.js";
 import "./assets/js/swiper.js";
-// import "./assets/js/contact-form.js";
+import "./assets/js/contact-form.js";
 import "./assets/js/faqs.js";
 import "./assets/js/sections-fixed.js";
 import "./assets/js/swiper-bundle.min.js";
